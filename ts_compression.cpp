@@ -403,8 +403,6 @@ int main(int argc, char *argv[]) {
             return 4;
         }
 
-        // TODO: reference_size probably needs to be in bytes, so change reference_size with
-        //  reference_size * sizeof(uint64_t) and ts_size with ts_size * sizeof(uint64_t)
         NaiveRLZ rlz_naive(
             ts,
             std::min(reference_size * sizeof(int64_t), ts_size * sizeof(int64_t)),
